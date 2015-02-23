@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GRUCustomAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YH-NJ-ERG">
+                                <rect key="frame" x="222" y="422" width="156" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="SpringFromCenter">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="erV-6b-aRD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl8-3z-D4R">
+                                <rect key="frame" x="223" y="466" width="154" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="ScaleFromBottom">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dTJ-ul-26K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clZ-vl-Dmn">
+                                <rect key="frame" x="179" y="515" width="242" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="RotateAndTranslateFromLeft">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVL-IX-DzW"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOE-ng-W72" customClass="GRUAlertView" customModule="GRUAlert">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="alertBgColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgViewColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bgAlpha">
+                                        <real key="value" value="0.65000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Alert Title"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lBtnColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="btnStroke">
+                                        <color key="value" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="secondButton" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="messageText" value="Alert message goes here."/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="rBtnLabel" value="OK"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="lBtnLabel" value="Cancel"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="alertRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="messageColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rBtnColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lBtnTxtColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rBtnTxtColor">
+                                        <color key="value" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cOE-ng-W72" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="474-9P-qoT"/>
+                            <constraint firstItem="rl8-3z-D4R" firstAttribute="centerX" secondItem="clZ-vl-Dmn" secondAttribute="centerX" id="5g6-t0-dsk"/>
+                            <constraint firstItem="rl8-3z-D4R" firstAttribute="top" secondItem="1YH-NJ-ERG" secondAttribute="bottom" constant="9" id="JQb-aO-9Uj"/>
+                            <constraint firstItem="rl8-3z-D4R" firstAttribute="centerX" secondItem="1YH-NJ-ERG" secondAttribute="centerX" id="JXi-4g-d1J"/>
+                            <constraint firstItem="clZ-vl-Dmn" firstAttribute="top" secondItem="rl8-3z-D4R" secondAttribute="bottom" constant="14" id="UVc-Ur-Sim"/>
+                            <constraint firstAttribute="centerX" secondItem="1YH-NJ-ERG" secondAttribute="centerX" id="agy-ah-ojY"/>
+                            <constraint firstItem="cOE-ng-W72" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dFP-iz-jDS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cOE-ng-W72" secondAttribute="bottom" id="eBP-nx-PLJ"/>
+                            <constraint firstItem="cOE-ng-W72" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l6g-pe-CkZ"/>
+                            <constraint firstAttribute="trailing" secondItem="cOE-ng-W72" secondAttribute="trailing" id="pwE-By-cxW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1YH-NJ-ERG" secondAttribute="bottom" constant="143" id="snP-P2-etx"/>
+                            <constraint firstItem="cOE-ng-W72" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="uc6-X5-Tis"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="474-9P-qoT"/>
+                                <exclude reference="uc6-X5-Tis"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="gruAlert" destination="cOE-ng-W72" id="bwK-uL-rAH"/>
+                        <segue destination="Dbi-lO-0iI" kind="show" identifier="segueToVC" id="Hpf-JO-XfQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="3yz-YE-ZXm" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="594"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="F0O-dd-afb">
+            <objects>
+                <viewController id="Dbi-lO-0iI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S2A-R1-aC1"/>
+                        <viewControllerLayoutGuide type="bottom" id="QKP-Va-osW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zaQ-Rw-AZM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How you doin'?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPv-qd-B43">
+                                <rect key="frame" x="175" y="162" width="251" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFj-qA-Dkj">
+                                <rect key="frame" x="252" y="243" width="70" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="&lt;- Back">
+                                    <color key="titleColor" red="0.2901960784" green="0.6705882353" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3yz-YE-ZXm" kind="unwind" unwindAction="unwindToRoot:" id="UT9-Fp-6Ny"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vPv-qd-B43" firstAttribute="top" secondItem="S2A-R1-aC1" secondAttribute="bottom" constant="142" id="36B-Ps-8Mc"/>
+                            <constraint firstItem="JFj-qA-Dkj" firstAttribute="centerX" secondItem="vPv-qd-B43" secondAttribute="centerX" constant="-13.5" id="QYl-g2-biB"/>
+                            <constraint firstItem="JFj-qA-Dkj" firstAttribute="top" secondItem="vPv-qd-B43" secondAttribute="bottom" constant="39" id="gLP-Tf-hXQ"/>
+                            <constraint firstAttribute="centerX" secondItem="vPv-qd-B43" secondAttribute="centerX" id="mtV-yz-f8B"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NiT-bJ-7UJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1591" y="594"/>
+        </scene>
+    </scenes>
+</document>

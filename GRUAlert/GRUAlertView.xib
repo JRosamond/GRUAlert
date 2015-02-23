@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GRUAlertView" customModule="GRUAlert" customModuleProvider="target">
+            <connections>
+                <outlet property="alertMessage" destination="hTM-Ju-trv" id="EL2-Kj-fTJ"/>
+                <outlet property="alertTitle" destination="NUe-Ko-1tb" id="iwe-1U-A7d"/>
+                <outlet property="backgroundView" destination="UPz-y5-P1G" id="HOE-VO-ZNl"/>
+                <outlet property="contentView" destination="JMZ-4S-pmU" id="Xfj-aD-AvE"/>
+                <outlet property="leftBtnWidthConstraint" destination="lnK-s2-le5" id="BGU-IP-Ic8"/>
+                <outlet property="mainView" destination="tOi-fA-QnW" id="zDQ-rn-a4g"/>
+                <outletCollection property="buttons" destination="GWj-sh-Hr2" collectionClass="NSMutableArray" id="K8z-Ly-eKf"/>
+                <outletCollection property="buttons" destination="pGH-FH-kNV" collectionClass="NSMutableArray" id="NPD-a6-Dab"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tOi-fA-QnW" userLabel="Main View">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPz-y5-P1G" userLabel="BackgroundView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMZ-4S-pmU" userLabel="ContentView">
+                    <rect key="frame" x="163" y="188" width="275" height="225"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUe-Ko-1tb" userLabel="Alert Title">
+                            <rect key="frame" x="87" y="22" width="101" height="27"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Message will be displayed here." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hTM-Ju-trv" userLabel="Alert Message">
+                            <rect key="frame" x="25" y="57" width="225" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="vbn-UP-rnR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGH-FH-kNV" userLabel="Right Button">
+                            <rect key="frame" x="138" y="190" width="138" height="35"/>
+                            <color key="backgroundColor" red="0.2901960784" green="0.6705882353" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="defaultAction" destination="-1" eventType="touchUpInside" id="1b1-gG-Ahx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWj-sh-Hr2" userLabel="Left Button">
+                            <rect key="frame" x="0.0" y="190" width="138" height="35"/>
+                            <color key="backgroundColor" red="0.79771953819999997" green="0.79769563669999999" blue="0.79770916700000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="eDf-0C-fdw"/>
+                            </constraints>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelAction" destination="-1" eventType="touchUpInside" id="C15-8Q-BZr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="pGH-FH-kNV" firstAttribute="width" secondItem="GWj-sh-Hr2" secondAttribute="width" id="1La-cc-ZIz"/>
+                        <constraint firstAttribute="bottom" secondItem="GWj-sh-Hr2" secondAttribute="bottom" id="2vp-fD-Gzh"/>
+                        <constraint firstItem="pGH-FH-kNV" firstAttribute="leading" secondItem="GWj-sh-Hr2" secondAttribute="trailing" id="7W1-xu-DOe"/>
+                        <constraint firstItem="pGH-FH-kNV" firstAttribute="height" secondItem="GWj-sh-Hr2" secondAttribute="height" id="CZi-tx-Irf"/>
+                        <constraint firstItem="GWj-sh-Hr2" firstAttribute="leading" secondItem="JMZ-4S-pmU" secondAttribute="leading" id="IE1-8w-mDD"/>
+                        <constraint firstAttribute="height" constant="225" id="N50-3s-KNW"/>
+                        <constraint firstItem="hTM-Ju-trv" firstAttribute="leading" secondItem="JMZ-4S-pmU" secondAttribute="leading" constant="25" id="PC4-Rm-7za"/>
+                        <constraint firstAttribute="width" constant="275" id="Tx9-gN-57n"/>
+                        <constraint firstItem="pGH-FH-kNV" firstAttribute="centerY" secondItem="GWj-sh-Hr2" secondAttribute="centerY" id="WSC-Io-xrc"/>
+                        <constraint firstAttribute="centerX" secondItem="NUe-Ko-1tb" secondAttribute="centerX" id="bNC-km-UAT"/>
+                        <constraint firstItem="hTM-Ju-trv" firstAttribute="top" secondItem="NUe-Ko-1tb" secondAttribute="bottom" constant="8" id="eVP-rq-91h"/>
+                        <constraint firstAttribute="centerX" secondItem="hTM-Ju-trv" secondAttribute="centerX" id="lap-At-wDz"/>
+                        <constraint firstItem="GWj-sh-Hr2" firstAttribute="width" secondItem="JMZ-4S-pmU" secondAttribute="width" multiplier="0.5" id="lnK-s2-le5"/>
+                        <constraint firstItem="NUe-Ko-1tb" firstAttribute="top" secondItem="JMZ-4S-pmU" secondAttribute="top" constant="22" id="o2E-y4-yXx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="UPz-y5-P1G" firstAttribute="bottom" secondItem="tOi-fA-QnW" secondAttribute="bottom" id="33L-5C-im0"/>
+                <constraint firstAttribute="centerX" secondItem="JMZ-4S-pmU" secondAttribute="centerX" id="Brs-YH-KJG"/>
+                <constraint firstItem="UPz-y5-P1G" firstAttribute="leading" secondItem="tOi-fA-QnW" secondAttribute="leading" id="Gwu-zx-oxF"/>
+                <constraint firstItem="UPz-y5-P1G" firstAttribute="trailing" secondItem="tOi-fA-QnW" secondAttribute="trailing" id="UiX-GE-F8G"/>
+                <constraint firstAttribute="centerY" secondItem="JMZ-4S-pmU" secondAttribute="centerY" id="byC-Gs-o7E"/>
+                <constraint firstItem="UPz-y5-P1G" firstAttribute="top" secondItem="tOi-fA-QnW" secondAttribute="top" id="qci-nG-zt3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <point key="canvasLocation" x="339" y="381"/>
+        </view>
+    </objects>
+</document>
