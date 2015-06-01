@@ -238,9 +238,9 @@ public class GRUAlertView: UIView
 	
 	// MARK: Initialization
 	
-	override public init()
+	public init()
 	{
-		super.init()
+		super.init(frame: CGRectZero)
 		setTranslatesAutoresizingMaskIntoConstraints(false)
 	}
 	
